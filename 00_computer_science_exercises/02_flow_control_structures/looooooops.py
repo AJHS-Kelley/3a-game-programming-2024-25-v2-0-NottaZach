@@ -49,11 +49,13 @@ for x in range(10):
 
 # while loops -- Musical Chairs
 playerScore= 0
+counter= 0
 while playerScore < 100: # run as long as thisis True
     print(f"Starting: {playerScore}")
-    playerScore += random.randint(1,3)
+    playerScore += random.randint(1,100)
     print(f"After: {playerScore}")
-
+    counter+= 1
+print(f"Counter: {counter}")
 
 
 
