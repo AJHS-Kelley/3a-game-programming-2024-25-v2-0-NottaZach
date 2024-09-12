@@ -1,6 +1,6 @@
 # Awarding extra lives, Zachariah Thomas, v0.0
 
-score = 10000 
+score = int(input("Please enter score \n"))
 lives = 3
 
 # Allow the user to input the score
