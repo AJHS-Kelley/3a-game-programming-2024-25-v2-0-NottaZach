@@ -1,7 +1,19 @@
 # Awarding extra lives, Zachariah Thomas, v0.0
 
+
 score = int(input("Please enter score \n"))
 lives = 3
+name = "Zachariah"
+
+
+print(f"Hello{name}!" "You scored {score} points. \n")
+
+
+#Character reference
+# Curly Braces {}
+#Brackets []
+#Angle-Brackets<>
+#Parentheses ()
 
 # Allow the user to input the score
 
