@@ -26,7 +26,7 @@ else:
     playerName = input("Type your name and press enter. \n")
 
 # THE RULES using MULTI-LINE strings
-print("""
+print(f"""
 Welcome to Rock, Paper, Scissors Robot!
 Its to time play RPS!
 
@@ -50,15 +50,27 @@ The CPU will select ROCK, PAPER, SCISSORS at random.
 while playerScore < 5 and cpuScore < 5:
     print(f"{playerName} you have {playerScore} points.\n The CPU has {cpuScore} points.\n")
     playerChoice = input( " Please enter rock, paper, or scissors and press enter.\n").lower()
-    if playerChoice != "rock" or playerChoice != "paper" or playerChoice != "scissors":
+    if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
         playerChoice = input( " Please enter rock, paper, or scissors and press enter.\n").lower() 
-        if playerChoice!= "rock" or playerChoice != "paper" or playerChoice != "scissors": 
+        if playerChoice!= "rock" and playerChoice != "paper" and playerChoice != "scissors": 
             print(" You are not following my rules. please try again. \n")
             exit()
         print(f"You have chosen{playerChoice}.\n")
     else:
         print(f"You have chosen{playerChoice}.\n")
+    
     # let player select rock, paper, 
+    cpuChoice = random.randint(0, 2) # randomly select 0, 1, or 2.  
+    if cpuChoice == 0:
+        cpuChoice= "rock"
+    elif cpuChoice == 1:
+        cpuChoice = "paper"
+    elif cpuChoice== 2:
+        cpuChoice= "scissors"
+    else:
+        print("Unable to dtermined CPU choice.\n Please restart.\n")
+        exit()
+    print(f"CPU choice:{cpuChoice}")
     # let cpu select choice at random.
     # compare player choice to cpu choice
     # print the results to the screen
