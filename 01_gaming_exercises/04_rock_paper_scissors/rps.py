@@ -72,7 +72,52 @@ while playerScore < 5 and cpuScore < 5:
         exit()
     print(f"CPU choice:{cpuChoice}")
     # let cpu select choice at random.
+
     # compare player choice to cpu choice
+    if playerChoice== "rock" and cpuChoice== "paper":
+        print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
+        print("The CPU wins a point.\n")
+        cpuScore += 1
+        # CPU wins
+    elif playerChoice== "rock" and cpuChoice== "scissors":
+        print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
+        print("You win a point.\n")
+        playerScore += 1
+        #Player wins
+    elif playerChoice=="rock" and cpuChoice== "rock":
+        print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
+        print(" It's a draw!\n")
+        #Draw
+    elif playerChoice== "scissors" and cpuChoice== "paper":
+        #Player wins
+        print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
+        print("You win a point.\n")
+        playerScore += 1
+    elif playerChoice== "scissors" and cpuChoice== "rock":
+        # Cpu wins
+        print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
+        print("The CPU wins a point.\n")
+        cpuScore += 1
+    elif playerChoice== "scissors" and cpuChoice== "scissors":
+        #Draw
+        print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
+        print(" It's a draw!\n")
+    elif playerChoice=="paper" and cpuChoice=="rock" : 
+        #Player wins
+        print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
+        print("You win a point.\n")
+        playerScore += 1
+    elif playerChoice=="paper" and cpuChoice=="scissor" :
+        # Cpu wins
+        print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
+        print("The CPU wins a point.\n")
+        cpuScore += 1
+    elif playerChoice=="paper" and cpuChoice=="paper" :
+        #Draw
+        print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
+        print(" It's a draw!\n")
+
+
     # print the results to the screen
     # award points to winner and output results
 
