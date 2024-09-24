@@ -29,9 +29,11 @@ if score <= 10000:
     print("Hahaha you lost a life. \n")
     lives += -1 
 elif score <= 100001:
-    print("Nice you earned another life. \n")    
+    print("Nice you earned another life. \n")  
+    lives +=  1 
 else:
     print("Lucky, you just earned 2 extra lives. \n")
+    lives += 2
 print(lives)
 
 
