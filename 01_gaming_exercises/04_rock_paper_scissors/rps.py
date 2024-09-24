@@ -93,12 +93,12 @@ while playerScore < 5 and cpuScore < 5:
         print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
         print("You win a point.\n")
         playerScore += 1
-    elif playerChoice== "scissors" and cpuChoice== "rock":
+    elif playerChoice == "scissors" and cpuChoice == "rock":
         # Cpu wins
         print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
         print("The CPU wins a point.\n")
         cpuScore += 1
-    elif playerChoice== "scissors" and cpuChoice== "scissors":
+    elif playerChoice == "scissors" and cpuChoice == "scissors":
         #Draw
         print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
         print(" It's a draw!\n")
