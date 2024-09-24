@@ -6,8 +6,7 @@ lives = 3
 name = "Zachariah"
 
 
-print(f"Hello{name}!" "You scored {score} points. \n")
-
+print(f"Hello {name}! You scored {score} points. \n")
 
 #Character reference
 # Curly Braces {}
@@ -28,11 +27,12 @@ print(f"Hello{name}!" "You scored {score} points. \n")
 
 if score <= 10000:
     print("Hahaha you lost a life. \n")
+    lives += -1 
 elif score <= 100001:
     print("Nice you earned another life. \n")    
 else:
     print("Lucky, you just earned 2 extra lives. \n")
-
+print(lives)
 
 
 
