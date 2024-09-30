@@ -13,7 +13,11 @@ cpuChoice = None
 
 
 # MAIN GAME LOOP
-while playerScore < 5 and cpuScore < 5:
+loopCount = 0
+loopsReq = int(input(" How many loops do you want?\nEnter an integer, no commas, and press ENTER.\n"))
+# req is the universal abbreviation in computer programming for REQUEST. reqs =  REQUESTS
+rpsTimeStart = time.time() # returns the number of seconds since Jan. 01, 1970 @ 12:00AM
+while loopCount < loopsReq:
    
     cpuChoice = random.randint(0, 2) # randomly select 0, 1, or 2.  
     if cpuChoice == 0:
@@ -84,6 +88,21 @@ while playerScore < 5 and cpuScore < 5:
     else:
         print("Unable to determine a winner. Please restart .\n")
         exit()
+    loopCount += 1
+
+
+print(f" Your final score: {playerScore}\nCPU Final Score: {cpuScore}\nDraws: {numDraws}\n")
+if playerScore> cpuScore:
+    print(f" Congratulations. You are the winner!\n")
+elif cpuScore> playerScore:
+    print(f"Womp Womp, the cpu wins.\n")
+else:
+    print("Unable to determine a winner.\nPlease restart.\n")
+    exit()
+rpsTimeStop = time.time()
+rpsTime = rpsTimeStop - rpsTimeStart
+print(f" Number of Loops: {loopCount}\n")
+print(f"Execution Time {rpsTime: .2F} seconds.\n")
     # print the results to the screen
     # award points to winner and output results
 
