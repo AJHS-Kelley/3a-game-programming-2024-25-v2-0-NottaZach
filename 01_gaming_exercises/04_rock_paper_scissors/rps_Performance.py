@@ -41,6 +41,7 @@ while loopCount < loopsReq:
     else:
         print("Unable to dtermined CPU choice.\n Please restart.\n")
         exit()
+    print(f"player choice:{playerChoice}")
     # compare player choice to cpu choice
     if playerChoice == "rock" and cpuChoice == "paper":
         print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
@@ -55,6 +56,7 @@ while loopCount < loopsReq:
     elif playerChoice == "rock" and cpuChoice == "rock":
         print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
         print(" It's a draw!\n")
+        numDraws += 1
         #Draw
     elif playerChoice == "scissors" and cpuChoice == "paper":
         #Player wins
@@ -70,6 +72,7 @@ while loopCount < loopsReq:
         #Draw
         print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
         print(" It's a draw!\n")
+        numDraws += 1
     elif playerChoice == "paper" and cpuChoice == "rock" : 
         #Player wins
         print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
@@ -84,6 +87,7 @@ while loopCount < loopsReq:
         #Draw
         print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
         print(" It's a draw!\n")
+        numDraws += 1
 
     else:
         print("Unable to determine a winner. Please restart .\n")
