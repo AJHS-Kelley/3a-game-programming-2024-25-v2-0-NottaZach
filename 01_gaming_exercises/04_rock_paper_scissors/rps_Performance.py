@@ -89,11 +89,7 @@ while loopCount < loopsReq:
         print(" It's a draw!\n")
         numDraws += 1
 
-    else:
-        print("Unable to determine a winner. Please restart .\n")
-        exit()
     loopCount += 1
-
 
 print(f" Your final score: {playerScore}\nCPU Final Score: {cpuScore}\nDraws: {numDraws}\n")
 if playerScore> cpuScore:
@@ -103,12 +99,15 @@ elif cpuScore> playerScore:
 else:
     print("Unable to determine a winner.\nPlease restart.\n")
     exit()
+
+
+
+
 rpsTimeStop = time.time()
 rpsTime = rpsTimeStop - rpsTimeStart
 print(f" Number of Loops: {loopCount}\n")
 print(f"Execution Time {rpsTime: .2F} seconds.\n")
-    # print the results to the screen
-    # award points to winner and output results
+
 
 
 
