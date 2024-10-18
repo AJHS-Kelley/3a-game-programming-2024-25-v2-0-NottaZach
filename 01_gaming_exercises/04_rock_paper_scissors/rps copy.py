@@ -91,6 +91,7 @@ def picWinner(playerChoice: str, cpuChoice: str) -> str: # playerChoice and cpuC
     elif playerChoice == "rock" and cpuChoice == "rock":
         print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
         print(" It's a draw!\n")
+        return "Draw"
         #Draw
     elif playerChoice == "scissors" and cpuChoice == "paper":
         #Player wins
@@ -108,6 +109,7 @@ def picWinner(playerChoice: str, cpuChoice: str) -> str: # playerChoice and cpuC
         #Draw
         print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
         print(" It's a draw!\n")
+        return "Draw"
     elif playerChoice == "paper" and cpuChoice == "rock" : 
         #Player wins
         print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
@@ -124,10 +126,12 @@ def picWinner(playerChoice: str, cpuChoice: str) -> str: # playerChoice and cpuC
         #Draw
         print(f" The cpu chose {cpuChoice} and you chose {playerChoice}. \n")
         print(" It's a draw!\n")
+        return "Draw"
 
     else:
         print("Unable to determine a winner. Please restart .\n")
         exit()
+        # return statements IMMEDIATELY exit a function.
 
 # Main game loop
 while playerScore< 5 and cpuScore < 5:
