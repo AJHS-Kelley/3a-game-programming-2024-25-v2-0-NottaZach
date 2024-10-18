@@ -133,6 +133,16 @@ def picWinner(playerChoice: str, cpuChoice: str) -> str: # playerChoice and cpuC
         exit()
         # return statements IMMEDIATELY exit a function.
 
+def score( winner: str) -> int:
+    """This function uses the winner to update the score for CPU, Num. DRAWS, and player."""
+    if winner == "Player Wins":
+        score = 1
+    elif winner == "CPU wins":
+        score = 1
+    else: # This is a draw
+        score = 0
+    return score
+
 # Main game loop
 while playerScore< 5 and cpuScore < 5:
     print(f"{playerName} you have {playerScore} points.\nThe CPU has {cpuScore} pints.\n")
