@@ -1,9 +1,24 @@
 # Dragon Realm, Zachariah Thomas, v0.0
 # Based on https://inventwithpython.com/chapter6.html by Al Sweigart
 
+
 import random
 import time
+import datetime
 
+# SAVING DATA TO A FILE
+# STEP 1-- Create the file name to use.
+logFileName = "dragonRealmLog" + str(time.time()) + ".txt"
+# Example : dragonRealmLog1132AM.txt
+
+#STEP 2 -- Create / open the file to save the data.
+saveData = open(logFileName,"x")
+# file modes
+# "x" CREATES FILE, IF FILE EXISTS, EXIT WITH ERROR MESSAGE
+# "W" REATES FILE, IF FILE EXITS, ERASE AND OVERWRITE FILE CONTENTS
+# "A" CREATES FILE, IF FILE EXISTS, APPEND DATA TO THE FILE
+
+saveData.write("GAME STARTED" + " "+ str(datetime.datetime.now()) + "\n")
 def displayIntro():
 
     print('You are in a land full of dragons. In front of you,')
@@ -57,3 +72,142 @@ while playAgain == 'yes' or playAgain == 'y':
 
     if hasCannonLauncher:
         damage += 35
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Close the file
+saveData.close()
