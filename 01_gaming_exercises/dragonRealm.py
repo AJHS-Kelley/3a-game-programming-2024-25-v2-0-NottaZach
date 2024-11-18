@@ -210,4 +210,5 @@ while playAgain == 'yes' or playAgain == 'y':
 
 
 # Close the file
+saveData.write("END OF GAME \n\n")
 saveData.close()
