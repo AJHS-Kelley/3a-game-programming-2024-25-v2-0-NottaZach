@@ -1,6 +1,6 @@
 # Dragon Realm, Zachariah Thomas, v0.0
 # Based on https://inventwithpython.com/chapter6.html by Al Sweigart
-
+# 
 
 import random
 import time
@@ -70,6 +70,7 @@ while playAgain == 'yes' or playAgain == 'y':
     if pickUpItem == "yes":
         hasCannonLauncher = True
 
+    # Remove this code, we are not doing to track amounts of damage for this project.  It will make it too complicated.  
     if hasCannonLauncher:
         damage += 35
 
