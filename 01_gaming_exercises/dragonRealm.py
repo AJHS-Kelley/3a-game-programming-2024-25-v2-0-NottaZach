@@ -19,29 +19,34 @@ saveData = open(logFileName,"x")
 # "A" CREATES FILE, IF FILE EXISTS, APPEND DATA TO THE FILE
 
 saveData.write("GAME STARTED" + " "+ str(datetime.datetime.now()) + "\n")
+
+items = 0
+alive = True
+waitTime = 4
+
 def displayIntro():
-
-    print('You are in a land full of dragons. In front of you,')
-    print('you see two caves. In one cave, the dragon is friendly')
-    print('and will share his treasure with you. The other dragon')
-    print('is greedy and hungry, and will eat you on sight.')
-    print()
-
+    print("You are lost in the mountains and need somewhere to stay.\n")
+    time.sleep(waitTime)
+    print("There is shelter in the mountains you can try to stay at for the night since it's cold.\n ")
+    time.sleep(waitTime)
+    print("However, there is something in there that doesn't seem to like new visitors.\n")
+    
 def chooseCave():
-    cave = ''
-    while cave != '1' and cave != '2':
-        print('Which cave will you go into? (1 or 2)')
-        cave = input()
-    return cave
+    shelter = ''
+    while shelter != '1' and shelter != '2':
+        print('Which shelter will you go into? (1 for endo shelter or 2 for buddha shelter)')
+        shelter = input()
+    return shelter
 
-def checkCave(chosenCave):
-    print('You approach the cave...')
-    time.sleep(2)
-    print('It is dark and spooky...')
-    time.sleep(2)
-    print('A large dragon jumps out in front of you! He opens his jaws and...')
-    print()
-    time.sleep(2)
+def checkCave(shelter):
+    if shelter == 1 and hasArrow:
+        print("You wander into the endo shelter, it doesn't look dark as it sounds... and barely any people.\n")
+        time.sleep(waitTime)
+        print("It's an elderly person walking up to you with a smirk.\n")
+        time.sleep(waitTime)
+        print("He draws his dual katana looking for a fight!\n")
+        time.sleep(waitTime)
+        print("You defend yourself very well but starts to lose ground until the elderly man stops.\n") 
 
     friendlyCave = random.randint(1, 2)
 
@@ -64,15 +69,8 @@ while playAgain == 'yes' or playAgain == 'y':
 
 
 
-    hasCannonLauncher = False
-    damage = random.randint (1,8)
-    pickUpItem = input("You see a beautiful CannonLauncher right next to some to a broken sword. Do you have the guts to pick it up? Type yes or no, then press enter.\n ").lower()
-    if pickUpItem == "yes":
-        hasCannonLauncher = True
 
-    # Remove this code, we are not doing to track amounts of damage for this project.  It will make it too complicated.  
-    if hasCannonLauncher:
-        damage += 35
+
 
 
 
