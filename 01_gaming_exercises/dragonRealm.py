@@ -46,7 +46,41 @@ def checkCave(shelter):
         time.sleep(waitTime)
         print("He draws his dual katana looking for a fight!\n")
         time.sleep(waitTime)
-        print("You defend yourself very well but starts to lose ground until the elderly man stops.\n") 
+        print("You defend yourself very well but starts to lose ground until the elderly man stops.\n")
+        time.sleep(waitTime)
+        print("As the elderly man stops, he starts fading away.\n")
+    elif shelter == 1 and hasShield:
+        print(" You wander more in the endo shelter, and still little to no people.\n")
+        time.sleep(waitTime)
+        print("Some strange noise got your attention, as if it was another person with a weapon.\n")
+        time.sleep(waitTime)
+        print("You see another person charge at you with a weapon but you blocked the attack.\n")
+        time.sleep(waitTime)
+        print("Another person come charging at you while you was blocking the first attack and you are getting stab.\n")
+        time.sleep(waitTime)
+        print("You passes out and died from all the blood loss.\n")
+        alive = False
+        return alive
+    elif shelter ==2 and hasShield:
+        print("You wander into the buddha shelter, it is very charming and bright.\n")
+        time.sleep(waitTime)
+    elif shelter == '2' and hasSword:
+        print("You wander into the buddha shelter, it is very charming and bright.\n")
+        time.sleep(waitTime)
+        print("The owner of the shelter looks at you with a estactic face.\n")
+        time.sleep(waitTime)
+        print("He greets you and says if you want to stay you have beat one of my greatest disciple.\n")
+        time.sleep(waitTime)
+        print(" The owner disciple spiritual pressure shocks you leaving you stunned.\n")
+        time.sleep(waitTime)
+        print("The disciple touches you with a single finger and erase you from existence.\n")
+        alive = False
+        return alive
+    
+
+
+playAgain =  'yes'
+
 
     friendlyCave = random.randint(1, 2)
 
