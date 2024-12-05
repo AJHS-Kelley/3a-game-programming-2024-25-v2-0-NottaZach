@@ -24,6 +24,7 @@ items = 0
 alive = True
 waitTime = 4
 
+
 def displayIntro():
     print("You are lost in the mountains and need somewhere to stay.\n")
     time.sleep(waitTime)
@@ -39,7 +40,7 @@ def chooseCave():
     return shelter
 
 def checkCave(shelter):
-    if shelter == 1 and hasArrow:
+    if shelter == 1 and hasSword:
         print("You wander into the endo shelter, it doesn't look dark as it sounds... and barely any people.\n")
         time.sleep(waitTime)
         print("It's an elderly person walking up to you with a smirk.\n")
@@ -64,6 +65,17 @@ def checkCave(shelter):
     elif shelter ==2 and hasShield:
         print("You wander into the buddha shelter, it is very charming and bright.\n")
         time.sleep(waitTime)
+        print("The owner of the shelter looks at you with a estactic face.\n")
+        time.sleep(waitTime)
+        print("He greets you and says if you want to stay you have beat one of my greatest disciple.\n")
+        time.sleep(waitTime)
+        print("The owner disciple spiritual pressure shocks you leaving you stunned but your shield resist the pressure.\n")
+        time.sleep(waitTime)
+        print("You blocked the disciiple finger which no one has ever done.\n")
+        time.sleep(waitTime)
+        print("The owner tell you that you earn his respect.\n")
+        time.sleep(waitTime)
+        print("Time to get some rest now.\n")
     elif shelter == '2' and hasSword:
         print("You wander into the buddha shelter, it is very charming and bright.\n")
         time.sleep(waitTime)
@@ -79,7 +91,7 @@ def checkCave(shelter):
     
 
 
-playAgain =  'yes'
+
 
 
     friendlyCave = random.randint(1, 2)
@@ -95,6 +107,13 @@ playAgain =  'yes'
 playAgain = 'yes'
 
 while playAgain == 'yes' or playAgain == 'y':
+    waitTime = int(input("Please input how many seconds would you like for the text to to wait. Enter 1-4.\n"))
+    print("Please select your weapon, 1 for sword or 2 for shield.\n")
+    weapon = input().lower
+    if weapon == 1:
+        hasSword = True
+    elif weapon == 2:
+        hasShield = True
     displayIntro()
     caveNumber = chooseCave()
     checkCave(caveNumber)
